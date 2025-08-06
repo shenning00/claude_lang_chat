@@ -39,18 +39,15 @@ setup(
     install_requires=[
         "langchain-anthropic>=0.3.18",
         "langchain-core>=0.3.0",
-        "langchain-community>=0.3.0",
         "anthropic>=0.40.0",
         "python-dotenv>=1.0.0",
         "rich>=13.0.0",
-        "colorama>=0.4.6",
         "textual>=5.2.0",
-        "tiktoken>=0.5.0",
     ],
     extras_require={
         "dev": [
             "pytest>=7.0.0",
-            "pytest-asyncio>=0.21.0",
+            "pytest-cov>=4.0.0",
             "black>=23.0.0",
             "flake8>=6.0.0",
             "mypy>=1.0.0",
