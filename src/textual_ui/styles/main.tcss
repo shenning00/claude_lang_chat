@@ -1,0 +1,280 @@
+/* Main CSS styling for Claude Chat Client */
+
+/* Global styles */
+Screen {
+    background: $background;
+    color: $text;
+}
+
+/* Header and Footer */
+Header {
+    dock: top;
+    height: 3;
+    background: $primary;
+    color: $text-muted;
+}
+
+Footer {
+    dock: bottom;
+    height: 1;
+    background: $primary-darken-1;
+    color: $text;
+}
+
+Footer .footer--key {
+    color: $text;
+}
+
+Footer .footer--description {
+    color: $text;
+}
+
+/* Main container layout */
+#main-container {
+    height: 1fr;
+    margin: 0;
+    padding: 0;
+}
+
+#chat-container {
+    width: 3fr;
+    height: 1fr;
+    border-right: vkey $border;
+}
+
+#sidebar {
+    width: 1fr;
+    height: 1fr;
+    background: $surface;
+}
+
+/* Chat messages area */
+#chat-messages {
+    height: 1fr;
+    border: solid $border;
+    padding: 1;
+    background: $background;
+    scrollbar-size-vertical: 1;
+}
+
+.message-user {
+    background: $primary-darken-2;
+    color: $text;
+    margin: 1 0;
+    padding: 1;
+    border-left: thick $primary;
+}
+
+.message-assistant {
+    background: $secondary-darken-2;
+    color: $text;
+    margin: 1 0;
+    padding: 1;
+    border-left: thick $secondary;
+}
+
+.message-system {
+    background: $warning-darken-2;
+    color: $text;
+    margin: 1 0;
+    padding: 1;
+    text-style: italic;
+    border-left: thick $warning;
+}
+
+.message-typing {
+    background: $surface-lighten-1;
+    color: $text-muted;
+    margin: 1 0;
+    padding: 1;
+    text-style: italic;
+    border-left: thick $accent;
+}
+
+/* Input area */
+#chat-input {
+    height: auto;
+    border: solid $primary;
+    background: $surface;
+    color: $text;
+    margin: 1 0 0 0;
+}
+
+#chat-textarea {
+    height: 6;
+    border: solid $primary;
+    background: $surface;
+    color: $text;
+}
+
+#button-container {
+    height: 3;
+    margin-top: 1;
+    width: 100%;
+}
+
+#submit-button {
+    height: 3;
+    width: 12.5%;
+    background: $success;
+    color: white;
+    border: solid green;
+}
+
+#thinking-button {
+    height: 3;
+    width: 12.5%;
+    dock: right;
+}
+
+/* Thinking button states */
+#thinking-button.thinking-on {
+    background: $primary;
+    color: $text;
+}
+
+#thinking-button.thinking-off {
+    background: $surface-lighten-1;
+    color: $text;
+}
+
+#chat-input:focus {
+    border: solid $accent;
+    background: $surface-lighten-1;
+}
+
+#chat-input.focused {
+    border: solid $accent;
+    background: $surface-lighten-1;
+}
+
+/* Sidebar styling */
+.sidebar-header {
+    height: 3;
+    background: $primary-darken-1;
+    color: $text;
+    text-align: center;
+    text-style: bold;
+    padding: 1;
+}
+
+.sidebar-content {
+    height: 1fr;
+    padding: 1;
+}
+
+/* Session management buttons */
+#session-buttons {
+    height: 3;
+    margin: 1;
+    width: 100%;
+}
+
+#new-session-btn {
+    width: 32%;
+    height: 3;
+    margin-right: 1;
+}
+
+#switch-session-btn {
+    width: 32%;
+    height: 3;
+    margin-right: 1;
+}
+
+#delete-session-btn {
+    width: 32%;
+    height: 3;
+}
+
+.session-item {
+    height: 3;
+    padding: 1;
+    margin: 0 0 1 0;
+    background: $surface-lighten-1;
+}
+
+.session-item:hover {
+    background: $primary-lighten-1;
+}
+
+.session-active {
+    background: $accent-darken-1;
+    color: $text;
+}
+
+.command-item {
+    height: 2;
+    padding: 0 1;
+    margin: 0 0 1 0;
+    color: $text-muted;
+}
+
+.command-item:hover {
+    background: $primary-lighten-2;
+    color: $text;
+}
+
+/* Status indicators */
+.status-connected {
+    color: $success;
+    text-style: bold;
+}
+
+.status-disconnected {
+    color: $error;
+    text-style: bold;
+}
+
+.status-thinking {
+    color: $warning;
+    text-style: italic;
+}
+
+/* Progress and loading */
+.progress-bar {
+    height: 1;
+    background: $primary;
+}
+
+.spinner {
+    color: $accent;
+}
+
+/* Markdown content styling */
+Markdown {
+    margin: 1 0;
+    padding: 1;
+}
+
+Markdown H1 {
+    color: $accent;
+    text-style: bold;
+}
+
+Markdown H2 {
+    color: $primary;
+    text-style: bold;
+}
+
+Markdown H3 {
+    color: $secondary;
+    text-style: bold;
+}
+
+Markdown BlockQuote {
+    background: $surface-lighten-1;
+    border-left: thick $accent;
+    padding: 1;
+    margin: 1 0;
+}
+
+Markdown CodeBlock {
+    background: $surface-darken-1;
+    color: $text;
+    padding: 1;
+    margin: 1 0;
+}
+
+/* Note: Textual CSS doesn't support @media queries like standard CSS
+   Responsive behavior should be handled in Python code */
