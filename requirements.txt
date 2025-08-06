@@ -1,7 +1,7 @@
 # Core LangChain and Anthropic dependencies
-langchain-anthropic>=0.3.18
-langchain-core>=0.3.0
-anthropic>=0.40.0  # Direct Anthropic API client for model listing
+langchain-anthropic>=0.1.23
+langchain-core>=0.1.0
+anthropic>=0.30.0  # Direct Anthropic API client for model listing
 
 # Environment and configuration
 python-dotenv>=1.0.0

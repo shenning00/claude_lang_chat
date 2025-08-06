@@ -37,9 +37,9 @@ setup(
     ],
     python_requires=">=3.8",
     install_requires=[
-        "langchain-anthropic>=0.3.18",
-        "langchain-core>=0.3.0",
-        "anthropic>=0.40.0",
+        "langchain-anthropic>=0.1.23",
+        "langchain-core>=0.1.0",
+        "anthropic>=0.30.0",
         "python-dotenv>=1.0.0",
         "rich>=13.0.0",
         "textual>=5.2.0",
